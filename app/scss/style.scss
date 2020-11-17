@@ -3,6 +3,126 @@
 @import 'reset';
 @import 'global';
 
+.header {
+    padding: 40px 40px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    & {
+        text-transform: capitalize;
+        @extend %rubik-500;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__list-item+.menu__list-item {
+        padding-left: 35px;
+    }
+
+    &__list-link {
+        color: $title;
+        transition: all .3s;
+        padding-bottom: 1px;
+    
+        &:hover {
+            color: $another;
+            border-bottom: 1px solid $another;
+        }
+    }
+
+    &__list-link--active {
+        color: $another;
+        border-bottom: 1px solid $another;
+    }
+}
+
+
+.user-nav {
+    display: flex;
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__search+&__center+&__circle {
+        margin-left: 25px;
+    }
+
+    &__search+&__center {
+        margin-left: 25px;
+    }
+
+    &__search {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $search;
+    }
+
+    &__link--search {
+        position: relative;
+        right: -18px;
+        bottom: -15px;
+    }
+
+    &__center {
+        background-color: $accent;
+        display: flex;
+        align-items: center;
+        width: 180px;
+        border-radius: 30px;
+    }
+
+    &__link--heart {
+        margin-left: 42px;
+        height: 20px;
+    }
+
+    &__link--basket {
+        border-left: 1px solid $border;
+        padding: 7px 0px 0px 21px;
+        margin-left: 30px;
+        height: 36px;
+    }
+
+    &__num {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        top: -25px;
+        right: -14px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+    }
+
+    &__circle {
+        background-color: $circle;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    &__link--circle {
+        position: relative;
+        left: 15px;
+        top: 13px;
+    }
+}
+
 
 
 @import 'media';

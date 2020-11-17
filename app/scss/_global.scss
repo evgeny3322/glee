@@ -1,2 +1,15 @@
 
-body {}
+
+body {
+    font-size: 15px;
+    line-height: 25px;
+    color: $default;
+    @extend %dmsans-500;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
