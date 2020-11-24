@@ -1,3 +1,18 @@
 $(function(){
-   $('body').style('background', '#000')
-});
+    $('.top-slider__inner').slick({
+        dots: true,
+        arrows: false,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 2000 
+ });
+
+ 
+ var mixer = mixitup('.product__content');
+ 
+ });
+
+
+
+
+ 
