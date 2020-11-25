@@ -7,10 +7,27 @@ $(function(){
         autoplaySpeed: 2000 
  });
 
+
  
- var mixer = mixitup('.product__content');
  
- });
+});
+
+
+
+
+var mixer = mixitup('.design__items', {
+    selectors: {
+        control: '.design__btn'
+    }
+});
+
+
+
+var mixer = mixitup('.product', {
+    selectors: {
+        control: '.products__btn'
+    }
+});
 
 
 
