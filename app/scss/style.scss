@@ -17,34 +17,34 @@
 .menu {
     & {
         @extend %rubik-500;
+        margin-left: 158px;
     }
 
     &__list {
         display: flex;
     }
 
-    &__list-item+.menu__list-item {
-        padding-left: 35px;
+    &__list-item {
+        &+& {
+            padding-left: 33px;
+        }
     }
 
     &__list-link {
         color: $title;
-        transition: all .3s;
+        transition: .3s;
         padding-bottom: 1px;
 
         &:hover {
             color: $accent;
 
         }
-    }
 
-    &__list-link--active {
-        color: $accent;
     }
 }
 
 
-.user-nav {
+.menu-nav {
     display: flex;
 
     &__link {
@@ -58,41 +58,49 @@
     }
 
     &__search+&__center {
-        margin-left: 25px;
+        margin-left: 21px;
     }
 
     &__search {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: $search;
+        background-color: $bg-white;
     }
 
-    &__link--search {
+    &__link-search {
         position: relative;
-        right: -18px;
+        right: -17px;
         bottom: -16px;
+    }
+
+    &__link-heart {
+        // margin-left: 42px;
+        // height: 20px;
+        margin-left: 33px;
+        height: 28px;
+        padding: 5px 5px;
+    }
+
+    &__link-basket {
+        border-left: 1px solid #fde7d3;
+        padding: 7px 0px 0px 27px;
+        margin-left: 15px;
+        height: 33px;
+
+
+
     }
 
     &__center {
         background-color: $accent;
         display: flex;
         align-items: center;
-        width: 180px;
+        width: 176px;
         border-radius: 30px;
+
     }
 
-    &__link--heart {
-        margin-left: 42px;
-        height: 20px;
-    }
-
-    &__link--basket {
-        border-left: 1px solid #fde7d3;
-        padding: 7px 0px 0px 21px;
-        margin-left: 30px;
-        height: 36px;
-    }
 
     &__num {
         position: relative;
@@ -100,8 +108,8 @@
         height: 20px;
         border-radius: 50%;
         background-color: #fff;
-        top: -29px;
-        right: -14px;
+        top: -12px;
+        right: 8px;
         font-size: 9px;
         line-height: 20px;
         text-align: center;
@@ -111,15 +119,15 @@
     }
 
     &__circle {
-        background-color: $circle;
+        background-color: $gray;
         border-radius: 50%;
         width: 50px;
         height: 50px;
     }
 
-    &__link--circle {
+    &__link-circle {
         position: relative;
-        left: 16px;
+        left: 15px;
         top: 13px;
     }
 }
@@ -131,17 +139,17 @@
     display: flex;
     justify-content: center;
 
-    &__contact {
+    &__item-contact {
         width: 250px;
         margin-right: 50px;
     }
 
-    &__nav {
+    &__item-nav {
         width: 170px;
         margin-right: 30px;
     }
 
-    &____item-form {
+    &__item-form {
         max-width: 470px;
     }
 
@@ -150,14 +158,10 @@
         display: block;
     }
 
-    &__adress,
-    &__email,
-    &__phone {
+    &__contacts {
         display: block;
-        margin-bottom: 14px;
-    }
-
-    &__phone {
+        margin-bottom: 20px;
+        font-style: unset;
         text-transform: uppercase;
     }
 
@@ -198,6 +202,12 @@
     &__link {
         margin-bottom: 14px;
         display: block;
+        transition: .30s;
+
+        &:hover {
+            color: #fcd7b6;
+            transform: all scale(1.2);
+        }
     }
 
     &__text {
@@ -207,7 +217,7 @@
     }
 
     &__form-input {
-        background-color: $fon;
+        background-color: $bg;
         max-width: 220px;
         width: 100%;
         border: none;
@@ -221,7 +231,7 @@
 
     &__form-btn {
         border: none;
-        background-color: $circle;
+        background-color: $gray;
         color: #fff;
         padding: 12px 26px;
         cursor: pointer;
@@ -229,7 +239,7 @@
     }
 }
 
-.footer-bottom {
+.footer-down {
     height: 75px;
     display: flex;
     justify-content: space-between;
@@ -249,6 +259,16 @@
         &:hover {
             color: $accent;
         }
+
+        &:before {
+            content: "|";
+            margin: 0 15px;
+            color: #7b7b7b;
+        }
+    }
+
+    &__nav-item--101::before {
+        content: "";
     }
 }
 
@@ -274,13 +294,15 @@
 
 
     &__title {
-        max-width: 412px;
+        max-width: 418px;
         font-size: 72px;
-        line-height: 70px;
+        line-height: 73px;
         margin-bottom: 45px;
         @extend %rubik-500;
         color: #243f4d;
         text-transform: uppercase;
+        width: 100%;
+
     }
 
     &__text {
@@ -295,9 +317,9 @@
         color: #fff;
         @extend %rubik-500;
         font-size: 15px;
-        line-height: 12px;
+        line-height: 16px;
         padding: 23px 98px 23px 28px;
-        background-color: $circle;
+        background-color: $gray;
         position: relative;
         display: block;
         width: 200px;
@@ -324,14 +346,12 @@
     .slick-dots {
         display: flex;
         justify-content: center;
-        margin-top: 200px;
-
+        margin-top: 90px;
 
 
         li {
             button {
                 font-size: 10px;
-                line-height: 4px;
                 background-color: #667983;
                 border: none;
                 background-color: #fde3cc;
@@ -358,7 +378,7 @@
 .categories-info {
 
     &__inner {
-        background-color: $fon;
+        background-color: $bg;
         padding: 0px 110px;
     }
 }
@@ -429,7 +449,7 @@
 }
 
 .mixitup-control-active {
-    outline: none;
+    outline: 0;
     color: #191919;
 }
 
@@ -440,100 +460,194 @@
     justify-content: center;
     padding: 0px 242px;
 
-    &__item {
-        width: 270px;
-        height: 100%;
-        min-height: 370px;
-        background-color: #fff;
-        box-shadow: 3px 6px 47px 3px rgba(37, 37, 37, 0.05);
-        border-radius: 10px;
-        position: relative;
-        padding: 28px 43px;
-    }
+    // &__link {
+    //     text-transform: uppercase;
+    //     color: $title;
+    //     display: inline-block;
+    //     border: 1px solid $accent;
+    //     padding: 14px 27px;
+    //     margin-top: 55px;
+    // }
 
-    &__img {
-        height: 200px;
-        width: 200px;
-    }
+    // &__item {
+    //     width: 270px;
+    //     height: 100%;
+    //     min-height: 370px;
+    //     background-color: #fff;
+    //     box-shadow: 3px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    //     border-radius: 10px;
+    //     position: relative;
+    //     padding: 28px 43px;
+
+    //     // overflow: hidden;
+    // }
+
+    // &__img {
+    //     height: 200px;
+    //     width: 200px;
+    // }
 
     &__items {
-        margin-top: 70px;
+        margin-top: 62px;
         text-align: center;
 
         &-title {
             @extend %dmsans-500;
             color: #243f4d;
-            line-height: 45px;
+            line-height: 3em;
         }
 
         &-price {
             @extend %dmsans-700;
-            color: $circle;
+            color: $gray;
         }
     }
 
-    &__categories {
-        opacity: 1%;
-        text-align: center;
-        margin-top: -41px;
 
-        &:hover {
-            opacity: 1;
-        }
+    // &__categories {
+    //     text-align: center;
+    //     margin-top: -41px;
 
-        &-link--search {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            padding: 13px 13px;
-            background-color: #fff;
-            transition: all .80s;
+    //     // position: absolute;
+    //     // display: flex;
+    //     // align-items: center;
+    //     // justify-content: space-around;
+    //     // transform: translateY(300%);
+    //     opacity: 1%;
 
-            &:hover,
-            &:hover path {
-                background-color: $circle;
-                fill: #fff;
-                padding: 20px 20px;
-                transform: all scale(1.2);
-            }
-        }
+    //     &:hover {
+    //         opacity: 1;
+    //     }
 
-        &-link--basket {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            padding: 13px 13px;
-            background-color: #fff;
-            margin: 10px;
-            transition: all .80s;
+    //     &-link--search {
+    //         width: 50px;
+    //         height: 50px;
+    //         border-radius: 50%;
+    //         padding: 13px 13px;
+    //         background-color: #fff;
+    //         transition: all .80s;
 
-            &:hover,
-            &:hover path {
-                background-color: $circle;
-                fill: #fff;
-                padding: 20px 20px;
-                transform: all scale(1.2);
-            }
-        }
+    //         &:hover,
+    //         &:hover path {
+    //             background-color: $gray;
+    //             fill: #fff;
+    //             padding: 20px 20px;
+    //             transform: all scale(1.2);
+    //         }
+    //     }
 
-        &-link--heart {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            padding: 13px 13px;
-            background-color: #fff;
-            transition: all .80s;
+    //     &-link--basket {
+    //         width: 50px;
+    //         height: 50px;
+    //         border-radius: 50%;
+    //         padding: 13px 13px;
+    //         background-color: #fff;
+    //         margin: 10px;
+    //         transition: all .80s;
 
-            &:hover,
-            &:hover path {
-                background-color: $circle;
-                fill: #fff;
-                padding: 20px 20px;
-                transform: all scale(1.2);
+    //         &:hover,
+    //         &:hover path {
+    //             background-color: $gray;
+    //             fill: #fff;
+    //             padding: 20px 20px;
+    //             transform: all scale(1.2);
+    //         }
+    //     }
 
-            }
+    //     &-link--heart {
+    //         width: 50px;
+    //         height: 50px;
+    //         border-radius: 50%;
+    //         padding: 13px 13px;
+    //         background-color: #fff;
+    //         transition: all .80s;
+
+    //         &:hover,
+    //         &:hover path {
+    //             background-color: $gray;
+    //             fill: #fff;
+    //             padding: 20px 20px;
+    //             transform: all scale(1.2);
+
+    //         }
+    //     }
+    // }
+}
+
+.product-item {
+    max-width: 370px;
+    width: 270px;
+    height: 100%;
+    min-height: 370px;
+    background-color: #fff;
+    box-shadow: 3px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    position: relative;
+    padding: 28px 43px;
+
+    &__img-box {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 25px;
+    }
+
+    &__link-box {
+        transition: all .3s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 13px;
+        height: 50px;
+        margin: 0 auto;
+        border-radius: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateY(300%);
+    }
+
+    &__link {
+        display: inherit;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 13px 13px;
+        margin: 10px;
+        transition: .80s;
+        background-color: #fff;
+        border: none;
+
+
+        path {
+            transition: .3s;
+            fill: $gray;
         }
     }
+
+    &__link:hover {
+        background-color: $gray;
+
+
+        path {
+            fill: #fff;
+
+        }
+
+    }
+
+    &__images {
+        height: 189px;
+        width: 154px;
+        margin: auto;
+        object-fit: contain;
+    }
+
+    &:hover {
+        .product-item__link-box {
+            transform: translateY(0);
+        }
+    }
+
 
 }
 
@@ -574,7 +688,7 @@
         text-align: left;
         position: absolute;
         left: 366px;
-        bottom: 128px;
+        bottom: 77px;
     }
 
     &__item-text {
@@ -595,7 +709,7 @@
         color: $title;
         @extend %rubik-500;
         font-size: 15px;
-        line-height: 12px;
+        line-height: 17px;
         padding: 20px 60px 20px 24px;
         background-color: #feefe2;
         position: relative;
@@ -665,7 +779,7 @@
     }
 
     &__item-subtitle {
-        color: $circle;
+        color: $gray;
         font-size: 16px;
     }
 }
