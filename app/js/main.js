@@ -2,7 +2,6 @@ $(function(){
     $('.top-slider__inner').slick({
         dots: true,
         arrows: false,
-        fade: false,
         autoplay: true,
         autoplaySpeed: 2000 
  });

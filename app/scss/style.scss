@@ -460,33 +460,6 @@
     justify-content: center;
     padding: 0px 242px;
 
-    // &__link {
-    //     text-transform: uppercase;
-    //     color: $title;
-    //     display: inline-block;
-    //     border: 1px solid $accent;
-    //     padding: 14px 27px;
-    //     margin-top: 55px;
-    // }
-
-    // &__item {
-    //     width: 270px;
-    //     height: 100%;
-    //     min-height: 370px;
-    //     background-color: #fff;
-    //     box-shadow: 3px 6px 47px 3px rgba(37, 37, 37, 0.05);
-    //     border-radius: 10px;
-    //     position: relative;
-    //     padding: 28px 43px;
-
-    //     // overflow: hidden;
-    // }
-
-    // &__img {
-    //     height: 200px;
-    //     width: 200px;
-    // }
-
     &__items {
         margin-top: 62px;
         text-align: center;
@@ -502,76 +475,6 @@
             color: $gray;
         }
     }
-
-
-    // &__categories {
-    //     text-align: center;
-    //     margin-top: -41px;
-
-    //     // position: absolute;
-    //     // display: flex;
-    //     // align-items: center;
-    //     // justify-content: space-around;
-    //     // transform: translateY(300%);
-    //     opacity: 1%;
-
-    //     &:hover {
-    //         opacity: 1;
-    //     }
-
-    //     &-link--search {
-    //         width: 50px;
-    //         height: 50px;
-    //         border-radius: 50%;
-    //         padding: 13px 13px;
-    //         background-color: #fff;
-    //         transition: all .80s;
-
-    //         &:hover,
-    //         &:hover path {
-    //             background-color: $gray;
-    //             fill: #fff;
-    //             padding: 20px 20px;
-    //             transform: all scale(1.2);
-    //         }
-    //     }
-
-    //     &-link--basket {
-    //         width: 50px;
-    //         height: 50px;
-    //         border-radius: 50%;
-    //         padding: 13px 13px;
-    //         background-color: #fff;
-    //         margin: 10px;
-    //         transition: all .80s;
-
-    //         &:hover,
-    //         &:hover path {
-    //             background-color: $gray;
-    //             fill: #fff;
-    //             padding: 20px 20px;
-    //             transform: all scale(1.2);
-    //         }
-    //     }
-
-    //     &-link--heart {
-    //         width: 50px;
-    //         height: 50px;
-    //         border-radius: 50%;
-    //         padding: 13px 13px;
-    //         background-color: #fff;
-    //         transition: all .80s;
-
-    //         &:hover,
-    //         &:hover path {
-    //             background-color: $gray;
-    //             fill: #fff;
-    //             padding: 20px 20px;
-    //             transform: all scale(1.2);
-
-    //         }
-    //     }
-    // }
 }
 
 .product-item {
