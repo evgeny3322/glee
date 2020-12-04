@@ -23,7 +23,7 @@ body {
     padding: 0 15px;
 }
 
-.container-about{
+.container-about {
     max-width: 1170px;
     margin: 0 auto;
 }
@@ -43,6 +43,13 @@ a {
     text-align: center;
     margin-bottom: 21px;
     margin-top: 63px;
+}
+
+.title-about {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: $about;
+    margin-bottom: 50px;
 }
 
 .button {

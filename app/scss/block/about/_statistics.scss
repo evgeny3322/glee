@@ -33,13 +33,6 @@
         color: $about;
     }
 
-    &__title {
-        @extend %dmsans-700;
-        font-size: 36px;
-        color: $about;
-        margin-bottom: 50px;
-    }
-
     &__text {
         @extend %rubik-400;
         font-size: 16px;

@@ -3,14 +3,15 @@
 @import 'common/reset';
 @import 'libs';
 @import 'common/global';
-@import 'block/top-slider';
-@import 'block/categories-info';
-@import 'block/products';
-@import 'block/design';
-@import 'block/articles';
-@import 'block/partners';
-@import 'block/statistics';
-@import 'block/elementor';
+@import 'block/index/top-slider';
+@import 'block/index/categories-info';
+@import 'block/index/products';
+@import 'block/index/design';
+@import 'block/index/articles';
+@import 'block/index/partners';
+@import 'block/about/statistics';
+@import 'block/about/elementor';
+@import 'block/about/collective';
 
 .nav {
     padding: 14px 38px 43px 38px;
@@ -724,6 +725,11 @@
     &__item-subtitle {
         color: $gray;
         font-size: 16px;
+    }
+
+    .mixitup-control-active {
+        outline: 0;
+        color: #191919;
     }
 }
 
