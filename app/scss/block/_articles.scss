@@ -1,0 +1,99 @@
+.top-slider {
+    &__inner {
+        background-color: $accent;
+        background-image: url(../images/slider/top-slider-bg.png);
+        background-repeat: no-repeat;
+        background-size: 35%;
+        background-position-x: 84%;
+        background-position-y: 54%;
+        padding: 220px 0 50px;
+    }
+
+    &__item {
+        display: flex !important;
+        justify-content: center;
+    }
+
+    &__content {
+        margin-right: 110px;
+    }
+
+    &__title {
+        max-width: 418px;
+        font-size: 72px;
+        line-height: 1;
+        margin-bottom: 28px;
+        @extend %rubik-500;
+        color: #243f4d;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    &__text {
+        font-size: 18px;
+        @extend %rubik-400;
+        color: #436372;
+        max-width: 370px;
+        margin-bottom: 45px;
+        line-height: 1.3;
+    }
+
+    &__link {
+        color: #fff;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 1;
+        padding: 23px 98px 23px 28px;
+        background-color: $gray;
+        position: relative;
+        display: block;
+        width: 200px;
+
+        &::after {
+            content: url(../images/slider/link-arrow.png);
+            position: absolute;
+            top: 23px;
+            right: 17px;
+        }
+    }
+
+    &__png {
+        width: 638px;
+        height: 277px;
+        align-self: flex-end;
+    }
+
+    &__img {
+        height: 264px;
+        margin-top: 58px;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 203px;
+
+        li {
+            button {
+                font-size: 10px;
+                background-color: #667983;
+                border: none;
+                background-color: #fde3cc;
+                width: 27px;
+                height: 27px;
+                border-radius: 50%;
+                margin: 0 6px;
+                cursor: pointer;
+            }
+
+            &.slick-active {
+                button {
+                    background-color: #fff;
+                    color: #243f4d;
+                    transition: all .7s;
+                    border: none;
+                }
+            }
+        }
+    }
+}

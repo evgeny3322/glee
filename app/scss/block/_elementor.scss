@@ -1,0 +1,29 @@
+.elementor {
+    padding: 86px 0px 82px 0px;
+    background-color: $accent;
+
+    &__colums {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+    &__column {
+        text-align: center;
+        width: 190px;
+    }
+
+    &__number {
+        @extend %dmsans-700;
+        font-size: 36px;
+        color: $about;
+        margin-top: 22px;
+    }
+
+    &__text {
+        @extend %dmsans-700;
+        font-size: 18px;
+        color: $about;
+        margin-top: 22px;
+    }
+}

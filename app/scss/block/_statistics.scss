@@ -1,0 +1,98 @@
+.statistics {
+    padding: 125px 0;
+
+    &__inner {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left 0%;
+        min-height: 680px;
+    }
+
+    &__content {
+        max-width: 551px;
+        margin-left: auto;
+        padding: 112px 0px;
+    }
+
+    &__info {
+        display: flex;
+        margin-bottom: 54px;
+    }
+
+    &__num {
+        font-size: 140px;
+        @extend %rubik-700;
+        color: $gray;
+        line-height: 0.3;
+    }
+
+    &__description {
+        margin-left: 30px;
+        @extend %rubik-400;
+        font-size: 16px;
+        color: $about;
+    }
+
+    &__title {
+        @extend %dmsans-700;
+        font-size: 36px;
+        color: $about;
+        margin-bottom: 50px;
+    }
+
+    &__text {
+        @extend %rubik-400;
+        font-size: 16px;
+        color: $about;
+        padding: 0px 0px 64px 0px;
+        border-bottom: 2px solid #ebeef3;
+    }
+
+    &__data {
+        display: flex;
+        margin-top: 42px;
+    }
+
+    &__column {
+        padding-right: 50px;
+
+        &+& {
+            padding-left: 33px;
+        }
+
+
+    }
+
+    &__number {
+        @extend %dmsans-700;
+        font-size: 36px;
+        color: $about;
+        margin-bottom: 12px;
+    }
+
+    &__numbers {
+
+
+        // &--projects::before {
+        //     background-image: url('../images/statistics/icons/projects.svg');
+        // }
+
+        // &--revenue::before {
+        //     background-image: url(../images/statistics/icons/revenue.svg);
+        // }
+
+        // &--awards::before {
+        //     background-image: url(../images/statistics/icons/awards.svg);
+        // }
+    }
+
+    .statistics__column--awards::before {
+        background-image: url(../images/statistics/icons/awards.svg);
+        position: relative;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 50px;
+    }
+}
