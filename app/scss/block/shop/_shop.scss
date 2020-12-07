@@ -176,7 +176,7 @@
     }
 
     &__name {
-        margin-bottom: 13px;
+        margin-bottom: 4px;
         @extend %rubik-400;
         font-size: 14px;
         color: #333333;
@@ -189,4 +189,9 @@
     }
 
 
+}
+
+.jq-ry-container {
+    padding: 0px;
+    margin-bottom: 5px;
 }
