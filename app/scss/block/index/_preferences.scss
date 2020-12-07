@@ -1,0 +1,80 @@
+.preferences {
+    margin-bottom: 97px;
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        margin-top: 160px;
+    }
+
+    &__item-left {
+        background-color: #feefe2;
+        position: relative;
+        margin-right: 27px;
+        width: 860px;
+        height: 390px;
+    }
+
+    &__item-right {
+        background-color: #feefe2;
+        position: relative;
+        width: 860px;
+        height: 390px;
+    }
+
+    &__items-img {
+        position: absolute;
+        left: 144px;
+        top: -100px;
+    }
+
+    &__item-info {
+        width: 100%;
+        text-align: left;
+        position: absolute;
+        bottom: 109px;
+        max-width: 313px;
+        right: 152px;
+    }
+
+    &__item-text {
+        margin-bottom: 30px;
+        @extend %rubik-400;
+        color: #243f4d;
+    }
+
+    &__item-title {
+        font-size: 26px;
+        line-height: 1;
+        margin-bottom: 15px;
+        color: #243f4d;
+        @extend %dmsans-700;
+    }
+
+    &__link {
+        color: $title;
+        @extend %rubik-500;
+        font-size: 15px;
+        line-height: 1;
+        padding: 20px 60px 20px 24px;
+        background-color: #feefe2;
+        position: relative;
+        display: block;
+        width: 200px;
+        border: 1px solid #b3b7b5;
+        border-radius: 6%;
+        transition: all .50s;
+
+        &::after {
+            content: url(../images/slider/arrow-product.png);
+            position: absolute;
+            top: 23px;
+            right: 17px;
+        }
+
+        &:hover {
+            background-color: #fff;
+
+        }
+    }
+}

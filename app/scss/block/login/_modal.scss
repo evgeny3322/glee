@@ -1,0 +1,84 @@
+.modal {
+    padding: 100px 0px 204px 0px;
+    max-width: 507px;
+    margin: 0 auto 115px;
+
+    &__label {
+        margin-bottom: 30px;
+        display: block;
+        font-size: 14px;
+        color: #436372;
+    }
+
+    &__input {
+        display: block;
+        width: 100%;
+        border: 2px solid #f6f6f6;
+        background-color: #fff;
+        margin-top: 4px;
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    &__btn {
+        background-color: $gray;
+        display: block;
+        color: #f6f6f6;
+        @extend %rubik-500;
+        padding: 17px 0;
+        border: none;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    &__error {
+        margin-top: 12px;
+        color: #436372;
+    }
+
+    &__checkbox {
+        color: #436372;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        color: $gray;
+        border-bottom: 2px solid #f6f6f6;
+        padding-bottom: 32px;
+    }
+
+    &__create {
+        text-align: center;
+        padding: 33px 0px 23px;
+    }
+
+    &__account {
+        background-color: #fff;
+        color: #243f4d;
+        @extend %rubik-500;
+        padding: 17px 0;
+        border: 2px solid $gray;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+}
+
+.partners-modal {
+    padding: 38px 0px 38px 0px;
+    background-color: #fef7f0;
+    margin-top: -168px;
+
+    &__list {
+        height: 170px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}

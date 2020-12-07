@@ -1,0 +1,31 @@
+.terms {
+    padding: 123px 0 42px;
+
+    &__content {}
+
+    &__title {
+        @extend %rubik-500;
+        font-size: 24px;
+        color: $about;
+        margin-bottom: 34px;
+    }
+
+    &__list {
+        @extend %rubik-400;
+        font-size: 16px;
+        color: $about;
+        list-style-type: decimal-leading-zero;
+        list-style-position: inside;
+    }
+
+    &__points {
+        margin-bottom: 35px;
+
+    }
+
+    &__text {
+        @extend %rubik-400;
+        color: $about;
+        margin-bottom: 75px;
+    }
+}

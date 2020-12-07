@@ -1,0 +1,123 @@
+.nav {
+    padding: 14px 38px 43px 38px;
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    margin-left: 160px;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        &+& {
+            padding-left: 33px;
+        }
+    }
+
+    &__link {
+        color: $title;
+        transition: all .3s;
+        padding-bottom: 1px;
+        @extend %rubik-500;
+
+        &:hover {
+            color: $accent;
+
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+
+    &__logo {
+        left: 84px;
+        position: absolute;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__search,
+    &__center,
+    &__circle {
+        margin-left: 17px;
+    }
+
+    &__search,
+    &__center {
+        margin-left: 21px;
+    }
+
+    &__search {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $bg-white;
+    }
+
+    &__link-search {
+        position: relative;
+        right: -17px;
+        bottom: -16px;
+    }
+
+    &__link-heart {
+        margin-left: 34px;
+        height: 19px;
+        padding: 5px 5px;
+    }
+
+    &__link-basket {
+        border-left: 1px solid #fde7d3;
+        padding: 10px 0px 0px 21px;
+        margin-left: 10px;
+        height: 32px;
+    }
+
+    &__center {
+        background-color: $accent;
+        display: flex;
+        align-items: center;
+        width: 176px;
+        border-radius: 30px;
+    }
+
+    &__num {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        top: -12px;
+        right: 8px;
+        font-size: 9px;
+        text-align: center;
+        color: #243f4d;
+        @extend %dmsans-400;
+        padding: 0px 3px 0px 3px;
+    }
+
+    &__circle {
+        background-color: $gray;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+
+    &__link-circle {
+        position: relative;
+        left: 15px;
+        top: 13px;
+    }
+}

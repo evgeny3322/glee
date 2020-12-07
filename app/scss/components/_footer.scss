@@ -1,0 +1,149 @@
+.footer {
+    &__setting {
+        padding: 116px 0px 78px;
+        display: flex;
+        justify-content: center;
+        max-width: 1170px;
+        width: 100%;
+        margin: auto;
+        @extend %rubik-400;
+        font-size: 14px;
+    }
+
+    &__item-contact {
+        max-width: 205px;
+        margin-right: 91px;
+    }
+
+    &__item-service {
+        min-width: 134px;
+        margin-right: 159px;
+    }
+
+    &__item-account {
+        min-width: 96px;
+        margin-right: 214px;
+    }
+
+    &__item-form {
+        max-width: 470px;
+    }
+
+    &__logo {
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    &__contacts {
+        margin-bottom: 10px;
+        font-style: unset;
+        @extend %rubik-400;
+        font-size: 14px;
+    }
+
+    &__add {
+        font-style: unset;
+        min-width: 192px;
+    }
+
+    &__tel,
+    &__email {
+        @extend %rubik-400;
+        font-size: 14px;
+    }
+
+    &__tel {
+        margin-bottom: 7px;
+    }
+
+    &__title {
+        @extend %dmsans-700;
+        text-transform: uppercase;
+        color: #1f2044;
+        margin-top: 18px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    &__link {
+        margin-bottom: 5px;
+        display: block;
+        transition: all .30s;
+
+        &:hover {
+            color: #fcd7b6;
+
+        }
+    }
+
+    &__text {
+        margin-bottom: 25px;
+        min-width: 257px;
+        color: #8d8d8d;
+    }
+
+    &__form-input {
+        background-color: $bg;
+        max-width: 170px;
+        width: 100%;
+        border: none;
+        padding: 7px 0px 7px 12px;
+
+        &::placeholder {
+            color: #234969;
+            font-size: 12px;
+        }
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__form-btn {
+        border: none;
+        background-color: $gray;
+        color: #fff;
+        cursor: pointer;
+        min-height: 38px;
+    }
+}
+
+.conclusion {
+    padding: 37px 4px 36px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #ececec;
+    max-width: 1170px;
+    margin: auto;
+
+    &__copy {
+        font-size: 14px;
+    }
+
+    &__span {
+        padding: 0px 8px;
+        font-size: 21px;
+    }
+
+    &__nav-item {
+        transition: all .3s;
+
+        &:hover {
+            color: $accent;
+        }
+
+        &:before {
+            content: "|";
+            margin: 0 8px;
+            color: #7b7b7b;
+        }
+
+
+    }
+
+    &__nav-prev:before {
+        content: "";
+    }
+}

@@ -1,99 +1,116 @@
-.top-slider {
-    &__inner {
-        background-color: $accent;
-        background-image: url(../images/slider/top-slider-bg.png);
-        background-repeat: no-repeat;
-        background-size: 35%;
-        background-position-x: 84%;
-        background-position-y: 54%;
-        padding: 220px 0 50px;
+.products {
+
+    &__filter-btn {
+        text-align: center;
+        background-color: transparent;
+        margin-bottom: 50px;
+        @extend %dmsans-700;
+        font-size: 16px;
     }
 
-    &__item {
-        display: flex !important;
-        justify-content: center;
+    .mixitup-control-active {
+        outline: 0;
+        color: #191919;
+    }
+}
+
+
+.product {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 33px 6px;
+    justify-content: center;
+    padding: 0px 303px;
+
+    &__items {
+        margin-top: 37px;
+        text-align: center;
+
+        &-title {
+            @extend %dmsans-500;
+            color: #243f4d;
+            line-height: 3em;
+        }
+
+        &-price {
+            @extend %dmsans-700;
+            color: $gray;
+        }
+    }
+}
+
+.product-item {
+    max-width: 370px;
+    width: 275px;
+    height: 100%;
+    min-height: 410px;
+    background-color: #fff;
+    box-shadow: 3px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    position: relative;
+    padding: 54px 43px;
+
+
+    &__img-box {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 25px;
     }
 
-    &__content {
-        margin-right: 110px;
-    }
-
-    &__title {
-        max-width: 418px;
-        font-size: 72px;
-        line-height: 1;
-        margin-bottom: 28px;
-        @extend %rubik-500;
-        color: #243f4d;
-        text-transform: uppercase;
-        width: 100%;
-    }
-
-    &__text {
-        font-size: 18px;
-        @extend %rubik-400;
-        color: #436372;
-        max-width: 370px;
-        margin-bottom: 45px;
-        line-height: 1.3;
+    &__link-box {
+        transition: all .3s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 13px;
+        height: 50px;
+        margin: 0 auto;
+        border-radius: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateY(300%);
     }
 
     &__link {
-        color: #fff;
-        @extend %rubik-500;
-        font-size: 15px;
-        line-height: 1;
-        padding: 23px 98px 23px 28px;
-        background-color: $gray;
-        position: relative;
-        display: block;
-        width: 200px;
+        display: inherit;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 13px 13px;
+        margin: 10px;
+        transition: all .80s;
+        background-color: #fff;
+        border: none;
+        cursor: pointer;
 
-        &::after {
-            content: url(../images/slider/link-arrow.png);
-            position: absolute;
-            top: 23px;
-            right: 17px;
+        path {
+
+            fill: $gray;
         }
     }
 
-    &__png {
-        width: 638px;
-        height: 277px;
-        align-self: flex-end;
+    &__link:hover {
+        background-color: $gray;
+
+        path {
+            fill: #fff;
+
+        }
     }
 
-    &__img {
-        height: 264px;
-        margin-top: 58px;
+    &__images {
+        height: 189px;
+        width: 100%;
+        margin: auto;
+        object-fit: contain;
+        max-width: 266px;
+        max-height: 260px;
     }
 
-    .slick-dots {
-        display: flex;
-        justify-content: center;
-        margin-top: 203px;
-
-        li {
-            button {
-                font-size: 10px;
-                background-color: #667983;
-                border: none;
-                background-color: #fde3cc;
-                width: 27px;
-                height: 27px;
-                border-radius: 50%;
-                margin: 0 6px;
-                cursor: pointer;
-            }
-
-            &.slick-active {
-                button {
-                    background-color: #fff;
-                    color: #243f4d;
-                    transition: all .7s;
-                    border: none;
-                }
-            }
+    &:hover {
+        .product-item__link-box {
+            transform: translateY(0);
         }
     }
 }

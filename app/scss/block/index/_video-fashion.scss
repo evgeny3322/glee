@@ -1,0 +1,39 @@
+.video-fashion {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 128px;
+    margin-top: 93px;
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        color: gray;
+        background: #a3bbc8;
+        border-radius: 50%;
+        animation: radial-pulse 3s infinite;
+        color: #516576;
+        transition: all .80s;
+
+        @keyframes radial-pulse {
+            0% {
+                box-shadow: 0 0 0 0px rgba(163, 187, 200, 1);
+            }
+
+            100% {
+                box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
+            }
+        }
+
+        &:hover {
+            background: $accent;
+            transform: scale(1.2);
+        }
+    }
+}

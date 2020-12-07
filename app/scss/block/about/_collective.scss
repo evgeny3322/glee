@@ -1,5 +1,5 @@
 .collective {
-    padding: 120px 0 0 0;
+    padding: 120px 0px 230px 0;
 
     &__items {
         display: flex;
@@ -48,13 +48,43 @@
     grid-row-gap: 110px;
 
     &__content {
+        display: flex;
         width: 326px;
         height: 110px;
         background-color: #fff;
         position: absolute;
         margin-top: -50px;
         padding: 30px 20px 3px 26px;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
     }
 
+    &__name {
+        @extend %dmsans-700;
+        font-size: 22px;
+        color: $title;
+        margin-bottom: 15px;
+    }
 
+    &__position {
+        @extend %rubik-400;
+        color: #565872;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    &__links {
+        display: flex;
+        margin: auto;
+    }
+
+    &__link {
+        background-color: #f6f6f6;
+        border-radius: 50%;
+        padding: 15px 13px 11px 13px;
+    }
+
+    &__insta,
+    &__google {
+        margin-left: 8px;
+    }
 }

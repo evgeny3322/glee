@@ -1,0 +1,15 @@
+.top {
+    &__container {
+        background-color: $bg-white;
+        margin: 0 auto;
+        text-align: center;
+        padding: 28px 0;
+    }
+
+    &__title {
+        @extend %rubik-300;
+        font-size: 36px;
+        color: #222933;
+        margin-bottom: 17px;
+    }
+}
