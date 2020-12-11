@@ -10,22 +10,22 @@
         font-size: 14px;
     }
 
-    &__item-contact {
+    &__item--contact {
         max-width: 205px;
         margin-right: 91px;
     }
 
-    &__item-service {
+    &__item--service {
         min-width: 134px;
         margin-right: 159px;
     }
 
-    &__item-account {
+    &__item--account {
         min-width: 96px;
         margin-right: 214px;
     }
 
-    &__item-form {
+    &__item--form {
         max-width: 470px;
     }
 
@@ -41,7 +41,7 @@
         font-size: 14px;
     }
 
-    &__add {
+    &__address {
         font-style: unset;
         min-width: 192px;
     }
@@ -105,18 +105,19 @@
         background-color: $gray;
         color: #fff;
         cursor: pointer;
-        min-height: 38px;
+        min-width: 100px;
     }
-}
 
-.conclusion {
-    padding: 37px 4px 36px 3px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 2px solid #ececec;
-    max-width: 1170px;
-    margin: auto;
+
+    &__down {
+        padding: 36px 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid #ececec;
+        max-width: 1170px;
+        margin: auto;
+    }
 
     &__copy {
         font-size: 14px;
@@ -145,5 +146,99 @@
 
     &__nav-prev:before {
         content: "";
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 1250px) {
+    .footer {
+        // &__setting {
+        //     padding: 116px 0px 78px;
+        //     display: flex;
+        //     justify-content: center;
+        //     max-width: 1170px;
+        //     width: 100%;
+        //     margin: auto;
+        //     @extend %rubik-400;
+        //     font-size: 14px;
+        // }
+
+        &__item--contact {
+            max-width: 205px;
+            margin-right: 10px;
+        }
+
+        &__item--service {
+            min-width: 134px;
+            margin-right: 10px;
+        }
+
+        &__item--account {
+            min-width: 96px;
+            margin-right: 10px;
+        }
+
+        &__item--form {
+            max-width: 470px;
+        }
+    }
+}
+
+@media (max-width: 992px) {}
+
+
+@media (max-width: 768px) {
+
+    .footer {
+        &__setting {
+            flex-wrap: wrap;
+        }
+
+        &__down {
+            display: block;
+            max-width: 320px;
+        }
+
+        &__menu {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 514px) {
+
+    .footer {
+        &__setting {
+            //  max-width: 468px;
+            max-width: 277px;
+        }
+
+        &__item--contact {
+            max-width: 205px;
+            margin-right: 62px;
+        }
+
+        &__item--service {
+            min-width: 260px;
+            margin-right: 10px;
+        }
+
+        &__item--account {
+            min-width: 260px;
+            margin-right: 10px;
+        }
+
+        &__item--form {
+            max-width: 430px;
+        }
+
+        &__copy {
+            max-width: 200px;
+        }
     }
 }

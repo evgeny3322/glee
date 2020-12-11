@@ -1,6 +1,10 @@
 .collective {
     padding: 120px 0px 230px 0;
 
+    &__title {
+        margin-bottom: 34px;
+    }
+
     &__items {
         display: flex;
     }
@@ -38,14 +42,15 @@
             right: 18px;
         }
     }
-}
 
-.collective-box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 110px;
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 110px;
+    }
 
     &__content {
         display: flex;
@@ -77,7 +82,7 @@
         margin: auto;
     }
 
-    &__link {
+    &__icon {
         background-color: #f6f6f6;
         border-radius: 50%;
         padding: 15px 13px 11px 13px;

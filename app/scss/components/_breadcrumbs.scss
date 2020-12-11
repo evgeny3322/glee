@@ -1,0 +1,26 @@
+.breadcrumbs {
+    display: inline-flex;
+    justify-content: center;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        color: #909499;
+    }
+
+    &__link {
+        margin: 4px;
+
+
+        &::after {
+            content: "/";
+        }
+
+        &:hover {
+            color: #fcd7b6;
+            transition: all .3s;
+        }
+    }
+}

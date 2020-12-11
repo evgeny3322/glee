@@ -35,5 +35,15 @@
             background: $accent;
             transform: scale(1.2);
         }
+
+        path {
+            fill: #fff;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .video-fashion {
+        height: 440px;
     }
 }
