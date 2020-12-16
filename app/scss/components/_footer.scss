@@ -10,23 +10,25 @@
         font-size: 14px;
     }
 
-    &__item--contact {
-        max-width: 205px;
-        margin-right: 91px;
-    }
+    &__item {
+        &--contact {
+            max-width: 205px;
+            margin-right: 91px;
+        }
 
-    &__item--service {
-        min-width: 134px;
-        margin-right: 159px;
-    }
+        &--service {
+            min-width: 134px;
+            margin-right: 159px;
+        }
 
-    &__item--account {
-        min-width: 96px;
-        margin-right: 214px;
-    }
+        &--account {
+            min-width: 96px;
+            margin-right: 214px;
+        }
 
-    &__item--form {
-        max-width: 470px;
+        &--form {
+            max-width: 470px;
+        }
     }
 
     &__logo {
@@ -108,7 +110,6 @@
         min-width: 100px;
     }
 
-
     &__down {
         padding: 36px 4px;
         display: flex;
@@ -128,28 +129,33 @@
         font-size: 21px;
     }
 
+    &__items {
+        display: flex;
+    }
+
+    &__nav-link {
+        &::before {
+            content: "|";
+        }
+
+        &:first-child {
+            &::before {
+                content: "";
+            }
+        }
+    }
+
+
     &__nav-item {
         transition: all .3s;
+        margin: 0 8px;
+        color: #7b7b7b;
 
         &:hover {
             color: $accent;
         }
-
-        &:before {
-            content: "|";
-            margin: 0 8px;
-            color: #7b7b7b;
-        }
-
-
-    }
-
-    &__nav-prev:before {
-        content: "";
     }
 }
-
-
 
 
 
@@ -170,17 +176,17 @@
 
         &__item--contact {
             max-width: 205px;
-            margin-right: 10px;
+            margin-right: 30px;
         }
 
         &__item--service {
             min-width: 134px;
-            margin-right: 10px;
+            margin-right: 30px;
         }
 
         &__item--account {
             min-width: 96px;
-            margin-right: 10px;
+            margin-right: 30px;
         }
 
         &__item--form {
@@ -218,23 +224,25 @@
             max-width: 277px;
         }
 
-        &__item--contact {
-            max-width: 205px;
-            margin-right: 62px;
-        }
+        &__item {
+            &--contact {
+                max-width: 205px;
+                margin-right: 62px;
+            }
 
-        &__item--service {
-            min-width: 260px;
-            margin-right: 10px;
-        }
+            &--service {
+                min-width: 260px;
+                margin-right: 10px;
+            }
 
-        &__item--account {
-            min-width: 260px;
-            margin-right: 10px;
-        }
+            &--account {
+                min-width: 260px;
+                margin-right: 10px;
+            }
 
-        &__item--form {
-            max-width: 430px;
+            &--form {
+                max-width: 430px;
+            }
         }
 
         &__copy {

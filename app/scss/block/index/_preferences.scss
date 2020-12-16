@@ -19,6 +19,7 @@
         margin-right: 27px;
         width: 860px;
         height: 390px;
+        display: flex;
     }
 
     &__item-right {
@@ -26,17 +27,20 @@
         position: relative;
         width: 860px;
         height: 390px;
+        display: flex;
     }
 
     &__items-img {
         margin-top: -95px;
+        margin-left: 145px;
+        object-fit: contain;
     }
 
     &__item-info {
-        position: absolute;
-        bottom: 109px;
+        bottom: 86px;
         max-width: 313px;
-        margin-left: 268px;
+        margin-top: 141px;
+        margin-left: 30px;
     }
 
     &__item-text {
@@ -83,11 +87,15 @@
 
 
 
-@media (max-width: 1217px) {
+@media (max-width: 1393px) {
     .preferences {
         max-width: 920px;
         margin: auto;
         padding: 0 5px;
+
+        &__item-info {
+            margin-top: 77px;
+        }
 
         &__items {
             display: block;
@@ -117,6 +125,10 @@
 @media (max-width: 992px) {
     .preferences {
         max-width: 580px;
+
+        &__items-img {
+            margin-left: 0px;
+        }
     }
 }
 

@@ -10,7 +10,7 @@
         justify-content: space-between;
         @extend %dmsans-700;
         color: #1a1a1a;
-        padding-bottom: 46px;
+        padding: 0px 8px 0px 8px;
         max-width: 1200px;
         margin: auto;
     }
@@ -46,6 +46,7 @@
         min-width: 370px;
         border: 1px solid #fff;
         margin-right: 33px;
+        box-shadow: rgba(37, 37, 37, 0.05) 3px 6px 47px 3px;
     }
 
     &__item-imglink {
@@ -147,6 +148,7 @@
 
         &__item {
             min-width: 445px;
+            margin-top: 75px;
         }
 
         &__item-imglink {

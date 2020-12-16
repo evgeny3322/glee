@@ -1,5 +1,22 @@
 $(function(){
     
+$('.product-slide__thumb').slick({
+        asNavFor: '.product-slide__big',
+        focusOnSelect: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        vertical: true,
+        draggable:false,
+    
+});
+$('.product-slide__big').slick({
+        asNavFor: '.product-slide__thumb',
+        draggable:false,
+        arrows:false,
+        fade:true,
+});
+
+
 $('.shop-content__filter-btn').on('click', function() { 
         $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
         $(this).addClass('shop-content__filter-btn--active');
@@ -12,22 +29,23 @@ $('.button-list').on('click', function (){
 $('.button-grid').on('click', function (){
         $('.product-item').removeClass('product-item--list')
     });
-
+// При нажатие на меню выходит список
 $('.header__circle').on('click', function(){
-     $('.menu-bar').toggleClass('menu-bar--active');
+     $('.menu__list').toggleClass('menu__list--active');
 });
-
-$('.menu-bar__img').on('click', function(){
-    $('.menu-bar').toggleClass('menu-bar--active');
+// При нажатие на крестик список скрывается
+$('.menu__img').on('click', function(){
+    $('.menu__list').toggleClass('menu__list--active');
 });
    
     
-$('.select-style').styler();
+$('.select-style, .product-one__item-num').styler();
     
     
 $('.filter-price__input').ionRangeSlider({
         type: "double",
         prefix: "$",
+        step: "0.01",
         onStart: function (data) {
             $( '.filter-price__from').text(data.from);
             $( '.filter-price__to').text(data.to);
@@ -68,7 +86,7 @@ var mixer = mixitup('.design__items', {
     }
 });
 
-var mixer = mixitup('.product', {
+var mixer = mixitup('.products__content', {
     selectors: {
         control: '.products__btn'
     }
